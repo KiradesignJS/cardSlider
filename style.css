@@ -5,3 +5,86 @@
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(211, 193, 228);
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(148, 70, 123);
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 244, 14);
+}
+
+.container {
+    display: flex;
+    gap: 12px;
+    max-width: 400px;
+    width: 100%;
+    background: rgb(116, 45, 94);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 30px;
+    overflow-x: scroll;
+}
+
+.container .card {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: white;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card .image {
+    height: 150px;
+    width: 150px;
+    padding: 4px;
+    background: rgb(116, 45, 94);
+    border-radius: 50%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card p {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
